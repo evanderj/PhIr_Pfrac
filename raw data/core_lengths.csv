@@ -1,0 +1,55 @@
+SampleEvent,Area,SiteName,PlotNumber,Org_st,Org_end,Org_lgth,Moss_lyr
+Early Season,Acidic,Dry,1,6,20,10,No moss
+Early Season,Acidic,Dry,2,7,18,6,Moss
+Early Season,Acidic,Dry,3,2,18,15,No moss
+Early Season,Acidic,Mesic,1,3,7,3,No moss
+Early Season,Acidic,Mesic,2,2,5,3,No moss
+Early Season,Acidic,Mesic,3,4,12,9,No moss
+Early Season,Acidic,Hydric,1,2,11,8,No moss
+Early Season,Acidic,Hydric,2,2,15,10,No moss
+Early Season,Acidic,Hydric,3,4,14,9,No moss
+Early Season,Non-acidic,Dry,1,2,16,12,Moss
+Early Season,Non-acidic,Dry,2,7,22,13,Moss
+Early Season,Non-acidic,Dry,3,7,23,13,Moss
+Early Season,Non-acidic,Mesic,1,4,17,13,No moss
+Early Season,Non-acidic,Mesic,2,3,15,10,No moss
+Early Season,Non-acidic,Mesic,3,3,21,16,Moss
+Early Season,Non-acidic,Hydric,1,2,18,16,No moss
+Early Season,Non-acidic,Hydric,2,4,18,14,No moss
+Early Season,Non-acidic,Hydric,3,2,22,20,No moss
+Mid Season,Acidic,Dry,1,6,14,9,Moss
+Mid Season,Acidic,Dry,2,3,17,11,Moss
+Mid Season,Acidic,Dry,3,5,13,8,No moss
+Mid Season,Acidic,Mesic,1,1,9,5,No moss
+Mid Season,Acidic,Mesic,2,1,4,3,No moss
+Mid Season,Acidic,Mesic,3,2,8,5,No moss
+Mid Season,Acidic,Hydric,1,7,17,8,Moss
+Mid Season,Acidic,Hydric,2,3,17,15,No moss
+Mid Season,Acidic,Hydric,3,6,14,4,Moss
+Mid Season,Non-acidic,Dry,1,1,18,15,No moss
+Mid Season,Non-acidic,Dry,2,3,22,17,No moss
+Mid Season,Non-acidic,Dry,3,3,24,18,Moss
+Mid Season,Non-acidic,Mesic,1,4,25,21,No moss
+Mid Season,Non-acidic,Mesic,2,2,19,16,No moss
+Mid Season,Non-acidic,Mesic,3,3,21,12,Moss
+Mid Season,Non-acidic,Hydric,1,1,20,19,No moss
+Mid Season,Non-acidic,Hydric,2,1,16,15,No moss
+Mid Season,Non-acidic,Hydric,3,1,20,18,No moss
+Late Season,Acidic,Dry,1,3,21,17,No moss
+Late Season,Acidic,Dry,2,3,23,15,Moss
+Late Season,Acidic,Dry,3,1,5,4,No moss
+Late Season,Acidic,Mesic,1,2,16,13,No moss
+Late Season,Acidic,Mesic,2,3,13,7,Moss
+Late Season,Acidic,Mesic,3,4,17,12,No moss
+Late Season,Acidic,Hydric,1,4,19,14,Moss
+Late Season,Acidic,Hydric,2,3,15,12,No moss
+Late Season,Acidic,Hydric,3,3,13,9,No moss
+Late Season,Non-acidic,Dry,1,1,22,19,No moss
+Late Season,Non-acidic,Dry,2,5,18,11,Moss
+Late Season,Non-acidic,Dry,3,4,17,13,Moss
+Late Season,Non-acidic,Mesic,1,2,21,17,No moss
+Late Season,Non-acidic,Mesic,2,3,21,16,No moss
+Late Season,Non-acidic,Mesic,3,4,14,6,No moss
+Late Season,Non-acidic,Hydric,1,1,19,15,No moss
+Late Season,Non-acidic,Hydric,2,2,20,16,No moss
+Late Season,Non-acidic,Hydric,3,3,23,19,No moss

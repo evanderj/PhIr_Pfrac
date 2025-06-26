@@ -1,0 +1,191 @@
+Project Year,Sample ID,Sample Date,Area,SiteName,PlotNumber,Horizon,Rep,N Average,C Average,CN ratio
+2021,E-D1 2-Jul-21,2-Jul-21,East,Dry,1,Organic,,1.76,31.61,20.95905578
+2021,E-M1 2-Jul-21,2-Jul-21,East,Mesic,1,Organic,,1.68,40.61,28.18964907
+2021,W-M1- 5-Jul-21,5-Jul-21,West,Mesic,1,Organic,,2.68,36.77,20.65484748
+2022,W-D1-O 22,4-Aug-22,West,Dry,1,Organic,,1.31,26.92,24.0519182
+2022,W-D1-T 22,4-Aug-22,West,Dry,1,Transition,,1.22,20.77,19.84745985
+2022,W-D1-M 22,4-Aug-22,West,Dry,1,Mineral,,0.86,13.58,18.52544726
+2022,W-M2-O 22,4-Aug-22,West,Mesic,2,Organic,,1.88,39.16,24.35743878
+2022,W-M1-T 22,4-Aug-22,West,Mesic,1,Transition,,1.58,32.93,24.32381858
+2022,W-M1-M 22,4-Aug-22,West,Mesic,1,Mineral,,0.23,3.25,16.4480112
+2022,W-H1A-OS 22,4-Aug-22,West,Hydric,1,Organic-Sat,A,2.27,34.24,17.62706452
+2022,W-H1-OD 22,4-Aug-22,West,Hydric,1,Organic 3,,2.49,35.62,16.71631877
+2022,W-H1-M 22,4-Aug-22,West,Hydric,1,Mineral,,0.55,7.80,16.68016032
+2023,E-D1-O 23,8-Aug-23,East,Dry,1,Organic,,1.57,35.79,26.51022854
+2023,E-D1-T 23,8-Aug-23,East,Dry,1,Transition,,1.45,25.11,20.19247764
+2023,E-D1-M 23,8-Aug-23,East,Dry,1,Mineral,,0.38,6.59,20.2170434
+2023,E-M1-O 23,8-Aug-23,East,Mesic,1,Organic,,1.04,35.61,39.90545836
+2023,E-M1-T 23,8-Aug-23,East,Mesic,1,Transition,,0.41,5.71,16.23837628
+2023,E-M1-M 23,8-Aug-23,East,Mesic,1,Mineral,,0.72,11.76,19.04762301
+2023,E-H1-O 23,8-Aug-23,East,Hydric,1,Organic,,1.76,37.51,24.97800993
+2023,E-H1-T 23,8-Aug-23,East,Hydric,1,Transition,,1.95,30.57,18.27888498
+2023,E-H1-M 23,8-Aug-23,East,Hydric,1,Mineral,,0.53,9.09,20.1790358
+2021,19-Jul E-H1A,19-Jul-21,East,Hydric,1,Organic,A,1.86,34.37,21.62014096
+2021,19-Jul E-H1B,19-Jul-21,East,Hydric,1,Organic,B,1.97,34.18,20.24571838
+2021,19-Jul E-H1C,19-Jul-21,East,Hydric,1,Organic,C,1.89,36.21,22.39207017
+2021,19-Jul E-H2A,19-Jul-21,East,Hydric,2,Organic,A,1.53,23.72,18.07705117
+2021,19-Jul E-H2B,19-Jul-21,East,Hydric,2,Organic,B,1.71,23.59,16.13378196
+2021,19-Jul E-H2C,19-Jul-21,East,Hydric,2,Organic,C,1.62,24.73,17.83045188
+2021,19-Jul E-H3A,19-Jul-21,East,Hydric,3,Organic,A,1.54,26.26,19.85263383
+2021,19-Jul E-H3B,19-Jul-21,East,Hydric,3,Organic,B,1.59,24.69,18.16768644
+2021,19-Jul E-H3C,19-Jul-21,East,Hydric,3,Organic,C,1.52,24.61,18.92696602
+2021,5-Aug W-H1A,5-Aug-21,West,Hydric,1,Organic,A,2.81,38.29,15.89721486
+2021,5-Aug W-H1B,5-Aug-21,West,Hydric,1,Organic,B,2.70,38.11,16.4455496
+2021,5-Aug W-H1C,5-Aug-21,West,Hydric,1,Organic,C,2.62,37.49,16.69464072
+2021,5-Aug W-H2A,5-Aug-21,West,Hydric,2,Organic,A,2.26,41.11,21.22043535
+2021,5-Aug W-H2B,5-Aug-21,West,Hydric,2,Organic,B,2.29,43.06,21.93159598
+2021,5-Aug W-H2C,5-Aug-21,West,Hydric,2,Organic,C,2.41,39.26,19.03836761
+2021,5-Aug W-H3A,5-Aug-21,West,Hydric,3,Organic,A,2.51,39.53,18.40336878
+2021,5-Aug W-H3C,5-Aug-21,West,Hydric,3,Organic,C,2.11,32.48,17.94094158
+2021,2-Jul E-D1,2-Jul-21,East,Dry,1,Organic,,1.74,32.25,21.61102281
+2021,2-Jul E-D2A,2-Jul-21,East,Dry,2,Organic,A,1.57,28.90,21.53677739
+2021,2-Jul E-D2B,2-Jul-21,East,Dry,2,Organic,B,1.57,32.09,23.91745028
+2021,2-Jul E-D3,2-Jul-21,East,Dry,3,Organic,,1.42,25.48,20.99472394
+2021,2-Jul E-M1,2-Jul-21,East,Mesic,1,Organic,,1.74,43.65,29.33852531
+2021,2-Jul E-M2,2-Jul-21,East,Mesic,2,Organic,,1.46,40.03,32.07903925
+2021,2-Aug 21 E-D3B-M,2-Aug-21,East,Dry,3,Mineral,B,0.21,0.94,5.220048289
+2021,2-Aug 21 E-D3C-M,2-Aug-21,East,Dry,3,Mineral,C,0.26,1.42,6.351521522
+2021,2-Aug 21 E-M1A-M,2-Aug-21,East,Mesic,1,Mineral,A,0.27,1.40,6.215744734
+2021,2-Aug 21 E-M1B-M,2-Aug-21,East,Mesic,1,Mineral,B,0.24,1.80,8.722062068
+2021,2-Aug 21 E-M1C-M,2-Aug-21,East,Mesic,1,Mineral,C,0.25,1.17,5.490064663
+2021,2-Aug 21 E-M2-M,2-Aug-21,East,Mesic,2,Mineral,,0.31,2.60,9.945353123
+2021,2-Aug 21 E-H2-M,2-Aug-21,East,Mesic,2,Mineral,,0.54,9.35,20.1814101
+2021,2-Aug 21 E-H3-M,2-Aug-21,East,Mesic,3,Mineral,,0.44,7.40,19.84141094
+2021,5-Aug 21 W-M3-M,5-Aug-21,East,Mesic,3,Mineral,,0.28,1.99,8.419333204
+2022,4-Aug 22 W-D1-O,4-Aug-22,West,Dry,1,Organic,,1.50,28.05,21.80959609
+2022,4-Aug 22 W-D1-M,4-Aug-22,West,Dry,1,Mineral,,0.91,12.83,16.52382081
+2022,4-Aug 22 W-D2-O,4-Aug-22,West,Dry,2,Organic,,1.72,34.30,23.25182774
+2022,4-Aug 22 W-D2-TA,4-Aug-22,West,Dry,2,Transition,A,1.09,16.47,17.63151334
+2022,4-Aug 22 W-D2-TB,4-Aug-22,West,Dry,2,Transition,B,1.04,15.87,17.79334494
+2021,5-Jul-21 W-D1-B,5-Jul-21,West,Dry,1,Organic,,1.17,21.60,21.61935388
+2021,5-Jul-21 W-D1-C,5-Jul-21,West,Dry,1,Organic,,1.16,23.28,23.47092387
+2021,5-Jul-21 W-D2,5-Jul-21,West,Dry,2,Organic,,1.60,28.88,21.10352839
+2021,5-Jul-21 W-D3,5-Jul-21,West,Dry,3,Organic,,1.35,26.60,22.97627418
+2021,5-Jul-21 W-M1,5-Jul-21,West,Mesic,1,Organic,,1.77,41.23,27.24552424
+2021,5-Jul-21 W-M2,5-Jul-21,West,Mesic,2,Organic,,1.14,45.39,46.63334399
+2021,5-Jul-21 W-M3,5-Jul-21,West,Mesic,3,Organic,,2.08,40.93,22.9454731
+2021,5-Jul-21 W-H1,5-Jul-21,West,Mesic,1,Organic,,2.32,38.39,19.29526558
+2021,5-Jul-21 W-H2,5-Jul-21,West,Mesic,2,Organic,,2.64,39.60,17.53641193
+2021,5-Jul-21 W-H3,5-Jul-21,West,Mesic,3,Organic,,2.57,39.83,18.10715361
+2021,22-Jul-21 W-D1,22-Jul-21,West,Dry,1,Organic,,1.34,22.49,19.64525638
+2021,22-Jul-21 W-D2,22-Jul-21,West,Dry,2,Organic,,1.30,41.72,37.56886033
+2021,22-Jul-21 W-D3,22-Jul-21,West,Dry,3,Organic,,1.46,23.92,19.11759278
+2021,22-Jul-21 W-M1,22-Jul-21,West,Mesic,1,Organic,,2.05,40.63,23.11606028
+2021,22-Jul-21 W-M2,22-Jul-21,West,Mesic,2,Organic,,2.15,36.60,19.85240169
+2021,22-Jul-21 W-M3,22-Jul-21,West,Mesic,3,Organic,,2.24,40.95,21.32936677
+2021,22-Jul-21 W-H1,22-Jul-21,West,Hydric,1,Organic,,2.66,39.75,17.46003799
+2021,22-Jul-21 W-H2,22-Jul-21,West,Hydric,2,Organic,,2.36,34.91,17.28721709
+2021,22-Jul-21 W-H3A,22-Jul-21,West,Hydric,3,Organic,A,2.72,40.71,17.48787346
+2021,22-Jul-21 W-H3B,22-Jul-21,West,Hydric,3,Organic,B,2.66,40.40,17.71010381
+2021,22-Jul-21 W-H3C,22-Jul-21,West,Hydric,3,Organic,C,2.34,36.10,18.02986155
+2021,5-Aug-21 W-M3-M,5-Aug-21,West,Mesic,3,Mineral,,0.31,2.27,8.706772698
+2022,4-Aug-22 W-D3-O,4-Aug-22,West,Dry,3,Organic,,1.44,29.61,24.05414013
+2022,4-Aug-22 W-D3-T,4-Aug-22,West,Dry,3,Transition,,1.45,24.22,19.48050336
+2022,4-Aug-22 W-D3-I,4-Aug-22,West,Dry,3,Iron,,0.50,5.24,12.22781275
+2022,4-Aug-22 W-D3-M,4-Aug-22,West,Dry,3,Mineral,,0.59,6.30,12.44105538
+2022,4-Aug-22 W-M1-OS,4-Aug-22,West,Mesic,1,Organic-Sat,,2.08,37.54,21.04732441
+2022,4-Aug-22 W-M1-T,4-Aug-22,West,Mesic,1,Transition,,1.75,35.38,23.57101829
+2022,4-Aug-22 W-M1-M,4-Aug-22,West,Mesic,1,Mineral,,0.35,3.17,10.56226792
+2022,4-Aug-22 W-M2-O,4-Aug-22,West,Mesic,2,Organic,,1.98,40.72,23.98661771
+2022,4-Aug-22 W-D2-M,4-Aug-22,West,Dry,2,Mineral,,0.41,3.15,8.978272451
+2022,4-Aug-22 W-M2A-T,4-Aug-22,West,Mesic,2,Transition,A,2.10,39.12,21.72428607
+2022,4-Aug-22 W-M2-M,4-Aug-22,West,Mesic,2,Mineral,,0.36,2.86,9.240088936
+2022,4-Aug-22 W-M3B-OS,4-Aug-22,West,Mesic,3,Organic-Sat,B,1.85,41.82,26.36589355
+2022,4-Aug-22 W-H2-OC,4-Aug-22,West,Hydric,2,Organic 2,,2.10,38.73,21.55609455
+2022,4-Aug-22 W-H1A-OS,4-Aug-22,West,Hydric,1,Organic-Sat,A,2.33,35.84,17.97392432
+2022,4-Aug-22 W-H1-OD,4-Aug-22,West,Hydric,1,Organic 3,,2.55,37.21,17.05069334
+2022,4-Aug-22 W-H1-M,4-Aug-22,West,Hydric,1,Mineral,,0.57,8.01,16.38649467
+2022,4-Aug-22 W-H2A-O,4-Aug-22,West,Hydric,2,Organic,A,1.43,35.21,28.80070349
+2022,4-Aug-22 W-M3-M,4-Aug-22,West,Mesic,3,Mineral,,0.30,4.16,16.4217051
+2022,4-Aug-22 W-H2-OD,4-Aug-22,West,Hydric,2,Organic 3,,1.18,21.71,21.45081239
+2022,4-Aug-22 W-H3-OS,4-Aug-22,West,Hydric,3,Organic-Sat,,2.63,40.09,17.80829267
+2022,4-Aug-22 W-H3-OC,4-Aug-22,West,Hydric,3,Organic 2,,2.75,40.16,17.06250601
+2022,4-Aug-22 W-H3-OD,4-Aug-22,West,Hydric,3,Organic 3,,2.43,40.38,19.43548116
+2023,8-Aug-23 E-D1-O,8-Aug-23,East,Dry,1,Organic,,1.71,39.60,27.00789848
+2023,8-Aug-23 E-D1-T,8-Aug-23,East,Dry,1,Transition,,1.54,26.84,20.39205717
+2023,8-Aug-23 E-D1-M,8-Aug-23,East,Dry,1,Mineral,,0.41,7.23,20.8007009
+2023,8-Aug-23 E-D2-O,8-Aug-23,East,Dry,2,Organic,,1.21,36.41,35.09575521
+2023,8-Aug-23 E-D2-T,8-Aug-23,East,Dry,2,Transition,,1.04,18.25,20.56150638
+2023,8-Aug-23 E-D2A-M,8-Aug-23,East,Dry,2,Mineral,A,0.36,4.99,16.3640184
+2023,8-Aug-23 E-D2B-M,8-Aug-23,East,Dry,2,Mineral,B,0.34,4.97,17.30671123
+2023,8-Aug-23 E-D3-O,8-Aug-23,East,Dry,3,Organic,,1.32,39.48,34.90997835
+2023,8-Aug-23 E-D3-T,8-Aug-23,East,Dry,3,Transition,,1.61,28.23,20.51063843
+2023,8-Aug-23 E-D3B-TS,8-Aug-23,East,Dry,3,Transition,B,1.40,25.08,20.96815375
+2023,8-Aug-23 E-D3C-TS,8-Aug-23,East,Dry,3,Transition,C,1.39,25.59,21.46528123
+2023,8-Aug-23 E-D3-M,8-Aug-23,East,Dry,3,Mineral,,0.69,12.11,20.46732162
+2023,8-Aug-23 E-H1-O,8-Aug-23,East,Hydric,1,Organic,,1.66,39.14,27.49879518
+2023,8-Aug-23 E-H1-OS,8-Aug-23,East,Hydric,1,Organic-Sat,,2.21,37.52,20.52874212
+2023,8-Aug-23 E-H1-T,8-Aug-23,East,Hydric,1,Transition,,1.98,32.96,19.4098459
+2023,8-Aug-23 E-H1-M,8-Aug-23,East,Hydric,1,Mineral,,0.59,10.17,20.2828542
+2023,8-Aug-23 E-H2-O,8-Aug-23,East,Hydric,2,Organic,,1.64,25.39,18.0542963
+2023,8-Aug-23 E-H2A-T,8-Aug-23,East,Hydric,2,Transition,A,1.25,19.58,18.26239447
+2023,8-Aug-23 E-H2B-T,8-Aug-23,East,Hydric,2,Transition,B,1.44,21.65,17.59128426
+2023,8-Aug-23 E-H2C-T,8-Aug-23,East,Hydric,2,Transition,C,1.56,30.43,22.74829543
+2023,8-Aug-23 E-H2-TS,8-Aug-23,East,Hydric,2,Transition,,0.68,13.53,23.38239001
+2023,8-Aug-23 E-H2A-I,8-Aug-23,East,Hydric,2,Iron,A,0.57,10.46,21.39554367
+2023,8-Aug-23 E-H2-M,8-Aug-23,East,Hydric,2,Mineral,,0.64,13.01,23.90280395
+2023,8-Aug-23 E-H3-O,8-Aug-23,East,Hydric,3,Organic,,1.66,33.04,23.28519883
+2023,8-Aug-23 E-H3-T,8-Aug-23,East,Hydric,3,Transition,,1.60,23.46,17.09405104
+2023,8-Aug-23 E-H3-M,8-Aug-23,East,Hydric,3,Mineral,,0.49,9.98,23.73955791
+2023,8-Aug-23 E-M1-O,8-Aug-23,East,Mesic,1,Organic,,1.07,38.47,41.92652507
+2023,8-Aug-23 E-M1-OS,8-Aug-23,East,Mesic,1,Organic-Sat,,1.54,35.17,26.62956981
+2023,8-Aug-23 E-M1-M,8-Aug-23,East,Mesic,1,Mineral,,0.74,12.54,19.89148454
+2023,8-Aug-23 E-M2-M,8-Aug-23,East,Mesic,2,Mineral,,0.19,2.15,13.59115357
+2023,8-Aug-23 E-M2-O,8-Aug-23,East,Mesic,2,Organic,,1.24,39.61,37.44760163
+2023,8-Aug-23 E-M2-T,8-Aug-23,East,Mesic,2,Transition,,0.86,15.25,20.67259227
+2023,8-Aug-23 E-M2A-I,8-Aug-23,East,Mesic,2,Iron,A,0.22,2.49,13.58347348
+2023,8-Aug-23 E-M2B-I,8-Aug-23,East,Mesic,2,Iron,B,0.23,2.94,15.23640829
+2023,8-Aug-23 E-M2C-I,8-Aug-23,East,Mesic,2,Iron,C,0.18,1.88,12.54025681
+2023,8-Aug-23 E-M3-O,8-Aug-23,East,Mesic,3,Organic,,1.31,42.05,37.57040421
+2021,19-Jul-21 E-M2,19-Jul-21,East,Mesic,2,Organic,,0.84,15.27,21.16220955
+2023,8-Aug-23 E-M3-T,8-Aug-23,East,Mesic,3,Transition,,1.66,24.33,17.17867913
+2023,8-Aug-23 E-M3-M,8-Aug-23,East,Mesic,3,Mineral,,0.36,2.79,9.217743069
+2023,8-Aug-23 E-M1A-I,8-Aug-23,East,Mesic,1,Iron,A,0.40,3.76,10.96210141
+2023,8-Aug-23 E-M1B-I,8-Aug-23,East,Mesic,1,Iron,B,0.39,3.71,11.10096901
+2023,8-Aug-23 E-M1C-I,8-Aug-23,East,Mesic,1,Iron,C,0.43,4.16,11.27560721
+2021,5-Aug-21 W-H2A,5-Aug-21,West,Hydric,2,Organic,A,2.40,38.54,18.73265315
+2021,19-Aug-21 E-H1B,19-Jul-21,East,Hydric,1,Organic,B,2.04,35.26,20.21214206
+2021,2-Jul E-M3,2-Jul-21,East,Mesic,3,Organic,,1.26,35.82,33.1316242
+2021,2-Jul E-H1,2-Jul-21,East,Hydric,1,Organic,,1.56,40.375,30.18923211
+2021,2-Jul E-H2,2-Jul-21,East,Hydric,2,Organic,,1.80,30.06,19.53360416
+2021,19-Jul E-D1A,19-Jul-21,East,Dry,1,Organic,A,1.75,31.1,20.7412532
+2021,19-Jul E-D1B,19-Jul-21,East,Dry,1,Organic,B,1.65,28.03,19.80944169
+2021,19-Jul E-D1C,19-Jul-21,East,Dry,1,Organic,C,1.79,31.94,20.80774102
+2021,19-Jul E-D2,19-Jul-21,East,Dry,2,Organic,,1.17,40.025,39.89672653
+2021,19-Jul E-D3,19-Jul-21,East,Dry,3,Organic,,1.12,24.86,25.90320978
+2021,19-Jul E-M1,19-Jul-21,East,Mesic,1,Organic,,1.32,44.335,39.1713458
+2021,19-Jul E-M3A,19-Jul-21,East,Mesic,3,Organic,A,0.88,41.72,55.31223607
+2021,22-Jul W-H3C,22-Jul-21,West,Dry,3,Organic,C,2.29,37.33,19.00957313
+2021,2-Aug E-D1A,2-Aug-21,East,Dry,1,Organic,,1.71,32.265,22.00399415
+2021,2-Aug E-D1B,2-Aug-21,East,Dry,1,Organic,,1.69,33.54,23.22506169
+2021,2-Aug E-D1C,2-Aug-21,East,Dry,1,Organic,,1.59,31.245,22.9094336
+2021,2-Aug E-D2,2-Aug-21,East,Dry,2,Organic,,1.515,25.49,19.62079718
+2021,2-Aug E-D3,2-Aug-21,East,Dry,3,Organic,,1.215,23.875,22.91563046
+2021,2-Aug E-M1-O,2-Aug-21,East,Mesic,1,Organic,,0.65,44.78,80.34860096
+2021,2-Aug E-M2-O,2-Aug-21,East,Mesic,2,Organic,,1.635,37.695,26.88746235
+2021,2-Aug E-M3,2-Aug-21,East,Mesic,3,Organic,,1.355,27.265,23.46983755
+2021,5-Aug W-M2,5-Aug-21,West,Mesic,2,Organic,,1.915,41.815,25.47494721
+2021,5-Aug W-M3-O,5-Aug-21,West,Mesic,3,Organic,,1.845,34.945,22.08581757
+2021,2-Aug E-D3A-M,2-Aug-21,East,Dry,3,Mineral,A,0.315,2.02,7.486528637
+2021,2-Jul-21 East Hydric 3,2-Jul-21,East,Hydric,3,Organic,,2.255,29.675,15.81315648
+2021,5-Jul-21 West Hydric 1,5-Jul-21,West,Hydric,1,Organic,,2.38,37.535,18.39593484
+2021,5-Jul-21 West Hydric 2,5-Jul-21,West,Hydric,2,Organic,,2.705,39.73,17.12794077
+2021,5-Jul-21 West Hydric 3,5-Jul-21,West,Hydric,3,Organic,,2.7,40.48,17.48404452
+2021,2-Aug-21 East Hydric 1A,2-Aug-21,East,Hydric,1,Organic,A,2.115,33.87,18.67493002
+2021,2-Aug-21 East Hydric 1B,2-Aug-21,East,Hydric,1,Organic,B,1.99,34.54,20.26251283
+2021,2-Aug-21 East Hydric 1C,2-Aug-21,East,Hydric,1,Organic,C,1.975,37.52,22.15154891
+2021,2-Aug-21 East Hydric 2,2-Aug-21,East,Hydric,2,Organic,,1.595,23.26,16.98596195
+2021,2-Aug-21 East Hydric 3A,2-Aug-21,East,Hydric,3,Organic,A,1.345,18.245,15.83979704
+2021,2-Aug-21 East Hydric 3B,2-Aug-21,East,Hydric,3,Organic,B,1.08,16.485,17.83343144
+2021,2-Aug-21 East Hydric 3C,2-Aug-21,East,Hydric,3,Organic,C,1.055,14.555,16.08494249
+2021,5-Aug-21 West Dry 1,5-Aug-21,West,Dry,1,Organic,,1.445,24.915,20.10355174
+2021,5-Aug-21 West Dry 2,5-Aug-21,West,Dry,2,Organic,,1.47,27.035,21.44703359
+2021,5-Aug-21 West Dry 3,5-Aug-21,West,Dry,3,Organic,,0.815,12.285,17.55624341
+2021,5-Aug-21 West Mesic 1,5-Aug-21,West,Mesic,1,Organic,,1.925,38.36,23.2366301
+2022,4-Aug-22 W-D1-TA,4-Aug-22,West,Dry,1,Transition,A,1.355,21.71,18.68043078
+2023,8-Aug-23 E-M1-T,8-Aug-23,East,Mesic,1,Transition,,0.49,5.31,12.60502307
+2022,4-Aug-22 W-M1-O,4-Aug-22,West,Mesic,1,Organic,,1.99,42.88,25.12784338
+2022,4-Aug-22 W-M3-O,4-Aug-22,West,Mesic,3,Organic,,1.815,44.84,28.81180757
+2022,4-Aug-22 W-M3-T,4-Aug-22,West,Mesic,3,Transition,,1.17,20.98,20.88991795
+2022,4-Aug-22 W-H2-OS,4-Aug-22,West,Hydric,2,Organic-Sat,,2.705,40.795,17.58720583
+2022,4-Aug-22 W-H2-I,4-Aug-22,West,Hydric,2,Iron,,2.26,37.305,19.27140851
