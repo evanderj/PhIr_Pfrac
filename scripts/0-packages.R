@@ -3,7 +3,7 @@ library(RColorBrewer)
 library(ggplot2)
 library(dplyr)
 library(tidyr)
-library(ggpubr)
+library(patchwork)
 library(ggthemes)
 library(stats)
 library(base)
@@ -18,16 +18,8 @@ library(pls)
 library(vegan)
 library(ggfortify)
 library(leaps)
+library(broom)
 
-
-# stacked bar graphs
-bar_stacked <- function(frac, yaxis, title)
-{
-  ggplot(Pfrac_NRP_stacked, aes(x=SiteName,y=Value, fill = Fraction)) +
-    geom_bar(position = "stack", stat = "identity") +
-    geom_errorbar(aes(ymax = Accumulation + Error, ymin = Accumulation - Error, width = 0.2)) + facet_grid(rows = vars(Area), cols = vars(SampleEvent)) + 
-    ylab(yaxis) + scale_color_manual(values = rev(PNWColors::pnw_palette("Bay", length(table(frac$Fraction))))) + ggtitle(title)
-}
 
 theme_er2 <- function() {  # this for all the elements common across plots
   theme_bw() %+replace%
@@ -51,3 +43,17 @@ theme_er2 <- function() {  # this for all the elements common across plots
           strip.text.y = element_text(size=12, face="bold", angle = 270) #facet labels
     )
 }
+
+p_value_ext <- function(model,pt,cor) {
+  if (pt == 1) {
+    p <- glance(model)
+    result <- paste("p = ",round(p$p.value,3))
+  } else if (pt==2) {
+    result <- paste("r = ",round(cor$estimate,3),"p = ",round(cor$p.value,3))
+  }else if (pt==3) {
+    result <- paste("ϱ = ",round(cor$estimate,3),"p = ",round(cor$p.value,3))
+  } 
+return(result)
+}
+
+

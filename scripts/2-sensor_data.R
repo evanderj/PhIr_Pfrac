@@ -155,3 +155,9 @@ summary(redox_filled$mean[which(redox_filled$area =="Acidic"& redox_filled$datet
 summary(redox_filled$mean[which(redox_filled$area =="Acidic"& redox_filled$datetime >= as.POSIXct("2021-07-15 00:00:00") & redox_filled$datetime <= as.POSIXct("2021-07-20 00:00:00"))],na.rm = T)
 
 
+moisture_summ <- moisture_clipped %>% filter(depth_cm >=5 &depth_cm<=15) %>% mutate(groups = if_else(treatment == "Acidic Dry" | treatment == "Acidic Mesic", "A",ifelse(treatment == "Acidic Hydric", "AH", ifelse(treatment =="Non-acidic Dry" | treatment =="Non-acidic Mesic", "N", ifelse(treatment == "Non-acidic Hydric", "NH", NA))))) %>%
+  group_by(groups) %>%
+  reframe(mean= mean(moisture, na.rm=T),
+          se= sd(moisture, na.rm = T)/sqrt(n()),
+          n = length(moisture))
+

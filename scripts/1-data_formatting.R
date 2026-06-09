@@ -1,5 +1,5 @@
-setwd("~/PhIr/PhIr 2021/for github")
-source("0-packages.R")
+setwd("~/GitHub/PhIr_Pfrac")
+source("scripts/0-packages.R")
 
 ### Phosphorous fractionation data ####
 Pfrac<-read.csv("raw data/PhIr2021_PfracSummary.csv", na.strings=c("#DIV/0!", "#VALUE!", " ", "NA"))
@@ -24,12 +24,15 @@ Pfrac<-Pfrac %>%
   mutate(PfracNRP=PfracH2ONRP+PfracBDNRP+PfracHAP+PfracNaOHNRP,
          PfracRP=PfracH2OSRP+PfracBDSRP+PfracNaOHSRP+PfracHClP) %>%
   mutate(ResP = PfracTotP - PfracRP - PfracNRP,
-         PfracNaOHNRP = PfracNaOHNRP + PfracHAP)
+         PfracNaOHNRP = PfracNaOHNRP + PfracHAP,
+         ResAl = PfracTotAl - PfracNaOHAl,
+         ResCa = PfracTotCa - PfracHClCa,
+         ResFe = PfracTotFe - PfracBDFe)
 names(Pfrac)
 
 
 ##calculate averages for each variable from analytical replicates
-Pfrac_Stacked<-gather(Pfrac, "Fraction", "Value", 13:42)
+Pfrac_Stacked<-gather(Pfrac, "Fraction", "Value", 13:45)
 Pfrac_Stacked_Summary<-Pfrac_Stacked %>%
   group_by(SoilSampleDate, Area, SiteName, Fraction, Horizon,PlotNumber)%>%
   summarize(mean=mean(Value, na.rm = TRUE),
@@ -59,7 +62,7 @@ Pfrac_se <- Pfrac_se %>% mutate(SampleEvent = recode(SoilSampleDate, "2-Jul-21"=
 
 ### Stacked bar graphs ####
 Pfrac_Means <- Pfrac_Means[-which(Pfrac_Means$Horizon=="Mineral"),]
-Pfrac_Means_stacked <- Pfrac_Means %>% gather("Fraction","Value", 6:35)
+Pfrac_Means_stacked <- Pfrac_Means %>% gather("Fraction","Value", 6:38)
 Pfrac_snap<-Pfrac_Means_stacked %>%
   group_by(Area, SiteName, Fraction, Horizon)%>%
   summarize(mean=mean(Value, na.rm = TRUE),
@@ -74,9 +77,12 @@ Pfrac_snap_RP<-Pfrac_snap %>% filter(Fraction == "PfracBDSRP"|Fraction =="PfracH
 Pfrac_snap_TP <- Pfrac_snap %>% filter(Fraction == "PfracRP"|Fraction =="PfracNRP"|Fraction == "ResP") %>% group_by(Area,SiteName) %>%
   mutate(Accumulation = if_else(Fraction =="PfracRP",mean[Fraction=="PfracRP"]+mean[Fraction=="PfracNRP"]+mean[Fraction=="ResP"],ifelse(Fraction =="PfracNRP",mean[Fraction=="PfracNRP"]+mean[Fraction=="ResP"],ifelse(Fraction =="ResP",mean[Fraction=="ResP"],NA))))
 
+Pfrac_snap_min <- Pfrac_snap %>% filter(Fraction == "PfracBDFe" | Fraction == "ResFe" | Fraction == "PfracNaOHAl" | Fraction == "ResAl" | Fraction == "PfracHClCa" | Fraction == "ResCa") %>% group_by(Area,SiteName) %>% 
+  mutate(Accumulation = if_else(Fraction =="PfracBDFe",mean[Fraction=="PfracBDFe"]+mean[Fraction=="ResFe"],ifelse(Fraction =="PfracNaOHAl",mean[Fraction=="PfracNaOHAl"]+mean[Fraction=="ResAl"],ifelse(Fraction =="PfracHClCa",mean[Fraction=="PfracHClCa"]+mean[Fraction=="ResCa"],mean))), mineral = if_else(Fraction == "PfracBDFe" | Fraction == "ResFe", "Fe", ifelse(Fraction == "PfracNaOHAl" | Fraction == "ResAl", "Al", ifelse(Fraction == "PfracHClCa" | Fraction == "ResCa", "Ca",NA))))
+
 write.csv(Pfrac_snap_RP, "formatted spreadsheets/Pfrac_RP_stacked.csv",row.names = F)
 write.csv(Pfrac_snap_TP, "formatted spreadsheets/Pfrac_TP_stacked.csv", row.names = F)
-
+write.csv(Pfrac_snap_min, "formatted spreadsheets/Pfrac_min_stacked.csv", row.names = F)
 
 
 #### Iron fractionation data ###
@@ -85,8 +91,9 @@ FefracFieldCodes<-read.csv("raw data/FeFractionation_FieldCodes.csv")
 colnames(Fefrac)<-FefracFieldCodes$RColumnHeaders
 Fefrac <-Fefrac %>% mutate(SiteName =factor(SiteName, levels = c("Dry", "Mesic", "Hydric"))) %>% mutate(Horizon = factor(Horizon,  levels = c("Organic", "Mineral"))) %>% mutate(Area=recode(Area,"East"="Acidic","West"="Non-acidic"))
 
-##Calculate Residual Iron
+##Calculate Residual Iron and non-crystalline iron
 Fefrac$ResFe <- Fefrac$TotFe - Fefrac$FefracPPFe-Fefrac$FefracHHFe-Fefrac$FefracDHFe
+Fefrac$NonCFe <- Fefrac$FefracPPFe + Fefrac$FefracHHFe
 
 # remove erroneous samples
 Fefrac <- Fefrac[-which(Fefrac$Area=="Acidic"&Fefrac$SiteName=="Mesic"&Fefrac$PlotNumber==1& Fefrac$SoilSampleDate=="2-Jul-21"),]
@@ -96,7 +103,7 @@ Fefrac <- Fefrac[-which(Fefrac$Area=="Acidic"&Fefrac$SiteName=="Mesic"&Fefrac$Pl
 
 
 ##calculate averages for each variable from analytical replicates
-Fefrac_Stacked<-gather(Fefrac, "Fraction", "Value", 13:21)
+Fefrac_Stacked<-gather(Fefrac, "Fraction", "Value", 13:22)
 Fefrac_Stacked_Summary<-Fefrac_Stacked %>%
   group_by(SoilSampleDate,Area,SiteName,Fraction,Horizon,PlotNumber)%>%
   summarize(mean=mean(Value, na.rm= TRUE),
@@ -128,7 +135,7 @@ Fefrac_se <- Fefrac_se %>% mutate(SampleEvent = recode(SoilSampleDate, "2-Jul-21
 
 ### Stacked bar graphs ####
 Fefrac_Means <- Fefrac_Means[-which(Fefrac_Means$Horizon == "Mineral"),]
-Fefrac_Means_stacked<-gather(Fefrac_Means, "Fraction", "Value", 6:14)
+Fefrac_Means_stacked<-gather(Fefrac_Means, "Fraction", "Value", 6:15)
 Fefrac_snap<-Fefrac_Means_stacked %>%
   group_by(Area,SiteName,Fraction,Horizon)%>%
   summarize(mean=mean(Value, na.rm= TRUE),
@@ -136,8 +143,8 @@ Fefrac_snap<-Fefrac_Means_stacked %>%
 
 
 # adding together average values to stack values and add error bars to the figures
-Fefrac_snap_Fe<-Fefrac_snap %>% filter(Fraction == "FefracPPFe"|Fraction =="FefracHHFe"|Fraction == "FefracDHFe") %>% group_by(Area,SiteName) %>%
-  mutate(Accumulation = if_else(Fraction =="FefracPPFe",mean[Fraction=="FefracPPFe"]+mean[Fraction=="FefracHHFe"]+mean[Fraction=="FefracDHFe"],ifelse(Fraction =="FefracHHFe",mean[Fraction=="FefracHHFe"]+mean[Fraction=="FefracDHFe"],ifelse(Fraction =="FefracDHFe",mean[Fraction=="FefracDHFe"],NA))))
+Fefrac_snap_Fe<-Fefrac_snap %>% filter(Fraction == "NonCFe"|Fraction =="FefracDHFe") %>% group_by(Area,SiteName) %>%
+  mutate(Accumulation = if_else(Fraction =="NonCFe",mean[Fraction=="NonCFe"]+mean[Fraction=="FefracDHFe"],ifelse(Fraction =="FefracDHFe",mean[Fraction=="FefracDHFe"],NA)))
 
 write.csv(Fefrac_snap_Fe, "formatted spreadsheets/Fefrac_Fe_stacked.csv", row.names = F)
 
@@ -151,7 +158,7 @@ CN <- read.csv("raw data/PhIr2021_CN.csv")
 wwdw<-wwdw %>% dplyr::select(Sample.Name,collection.date,Area,Site,Plot,Rep,Horizon,dw.ww,Moisture)
 LOI <- LOI %>% dplyr::select(Sample.Name,collection.date,Area,Site,Plot,Rep,Horizon,LOI)
 pH <- pH %>% dplyr::select(collection.date,Area,Site,Plot,pH)
-CN <- CN %>% filter(Project.Year=="2021"&Horizon=="Organic") %>% dplyr::select(Sample.Date,Area,SiteName,PlotNumber,Rep,Horizon,N.Average,C.Average,CN.ratio) %>% mutate(Horizon = recode(Horizon, "Organic" = "O"))
+CN <- CN %>% filter(Horizon=="Organic") %>% dplyr::select(Sample.Date,Area,SiteName,PlotNumber,Rep,Horizon,N.Average,C.Average,CN.ratio) %>% mutate(Horizon = recode(Horizon, "Organic" = "O"))
 names(CN) <- c("collection.date","Area","Site","Plot","Rep","Horizon","N%","C%","CN")
 
 weights <- merge(wwdw, LOI, by=intersect(names(wwdw[,1:7]),names(LOI[,1:7])))
@@ -203,7 +210,7 @@ thaw_sample <- thaw_stacked %>% filter(Date == "1-Jul-2021" | Date == "24-Jul-20
 write.csv(thaw_sample, "formatted spreadsheets/thaw_sample.csv", row.names = F)
 
 ### summarize PSI data ####
-PSI <- read.csv("raw data/PhIr2021_PSI_2.csv", na.strings=c("#DIV/0!", "#VALUE!", " ", "NA"))
+PSI <- read.csv("raw data/PhIr2021_PSI.csv", na.strings=c("#DIV/0!", "#VALUE!", " ", "NA"))
 names(PSI) <- c("Project", "SoilSampleDate", "Area", "SiteName", "PlotNumber", "SampleRep", "Horizon", "SampleName", "PSI")
 PSI <- PSI %>% filter(!is.na(PlotNumber))%>% mutate(Area=recode(Area, "West"="Non-acidic","East"="Acidic")) 
 
@@ -222,14 +229,15 @@ PSI_Summary<-PSI %>%
 ### compile spreadsheets into master spreadsheet #### 
 compiled_pfrac <- Pfrac_Means %>% dplyr::select(SampleEvent,Area,SiteName,PlotNumber,Horizon,PfracBDFe,PfracBDNRP,PfracBDSRP,PfracH2ONRP,PfracH2OSRP,PfracHClCa,PfracHClP,PfracNaOHAl,PfracNaOHNRP,PfracNaOHSRP,PfracNRP,PfracRP,PfracTotAl,PfracTotCa,PfracTotFe,PfracTotP,ResP)
  compiled_PSI <- PSI_Summary %>% dplyr::select(SampleEvent,Area,SiteName,PlotNumber,Horizon,mean)
- compiled_fefrac<- Fefrac_Means %>% dplyr::select(SampleEvent,Area,SiteName,PlotNumber,Horizon,FefracDHFe,FefracHHFe,FefracPPFe,ResFe)
+ compiled_fefrac<- Fefrac_Means %>% dplyr::select(SampleEvent,Area,SiteName,PlotNumber,Horizon,FefracDHFe,NonCFe,ResFe)
  compiled_soils <- soils_means %>% dplyr::select(SampleEvent,Area,SiteName,PlotNumber,LOI,Moisture,pH,`C%`,`N%`,CN)
  
  compiled_pt1 <- merge(compiled_pfrac,compiled_PSI, by = intersect(names(compiled_pfrac[,1:6]),names(compiled_PSI[,1:6])))
 compiled_pt2 <- merge(compiled_fefrac,compiled_soils,by=intersect(names(compiled_fefrac[,2:5]),names(compiled_soils[,1:4]))) 
-compiled_pt3 <- merge(compiled_pt1,compiled_pt2, by = intersect(names(compiled_pt1[,1:6]),names(compiled_pt2[,c(5,1,2,3,4,6)])))
+compiled_pt3 <- merge(compiled_pt1,compiled_pt2, by = intersect(names(compiled_pt1[,1:6]),names(compiled_pt2[,c(5,1,2,3,4,6)]))) %>% mutate(OrgFe = FefracDHFe +NonCFe - PfracBDFe) %>% mutate(OrgFe=if_else(OrgFe <0, 0,OrgFe))
 
-soils_PSI <- compiled_pt3 %>% ungroup() %>% mutate(treatment=paste(Area,SiteName, sep = " ")) %>% dplyr::select(SampleEvent,Area,SiteName,treatment,PlotNumber,Horizon,mean,pH,LOI,Moisture,`C%`,`N%`,CN,PfracBDFe, PfracBDNRP,PfracBDSRP,PfracH2ONRP,PfracH2OSRP, PfracHClCa,PfracHClP, PfracNaOHAl,PfracNaOHNRP,PfracNaOHSRP,PfracNRP,PfracRP,PfracTotAl,PfracTotCa,PfracTotFe, PfracTotP,ResP,FefracDHFe,FefracHHFe,FefracPPFe,ResFe)
-names(soils_PSI) <- c("SampleEvent","Area", "SiteName", "treatment","PlotNumber","Horizon","PfracPSI","pH","LOI","moisture","C%","N%","CN_ratio","PfracBDFe", "PfracBDNRP","PfracBDSRP","PfracH2ONRP","PfracH2OSRP", "PfracHClCa","PfracHClP", "PfracNaOHAl","PfracNaOHNRP","PfracNaOHSRP","PfracNRP","PfracRP","PfracTotAl","PfracTotCa","PfracTotFe", "PfracTotP","ResP","FefracDHFe","FefracHHFe","FefracPPFe","ResFe")
+
+soils_PSI <- compiled_pt3 %>% ungroup() %>% mutate(treatment=paste(Area,SiteName, sep = " ")) %>% dplyr::select(SampleEvent,Area,SiteName,treatment,PlotNumber,Horizon,mean,pH,LOI,Moisture,`C%`,`N%`,CN,PfracBDFe, PfracBDNRP,PfracBDSRP,PfracH2ONRP,PfracH2OSRP, PfracHClCa,PfracHClP, PfracNaOHAl,PfracNaOHNRP,PfracNaOHSRP,PfracNRP,PfracRP,PfracTotAl,PfracTotCa,PfracTotFe, PfracTotP,ResP,FefracDHFe,NonCFe,OrgFe,ResFe)
+names(soils_PSI) <- c("SampleEvent","Area", "SiteName", "treatment","PlotNumber","Horizon","PfracPSI","pH","LOI","moisture","C%","N%","CN_ratio","PfracBDFe", "PfracBDNRP","PfracBDSRP","PfracH2ONRP","PfracH2OSRP", "PfracHClCa","PfracHClP", "PfracNaOHAl","PfracNaOHNRP","PfracNaOHSRP","PfracNRP","PfracRP","PfracTotAl","PfracTotCa","PfracTotFe", "PfracTotP","ResP","FefracDHFe","NonCFe","OrgFe","ResFe")
 
 write.csv(soils_PSI,"formatted spreadsheets/soils_PSI.csv", row.names = F)
